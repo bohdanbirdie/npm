@@ -5,31 +5,34 @@
   "main": "index.js",
   "sasslintConfig": "/",
   "scripts": {
-    "install": "npm run build && npm run open",
+    "install": "bower install && npm run build && npm run open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:html": "node_modules/.bin/htmlhint dest",
     "lint:css": "node_modules/.bin/stylelint 'dest/*.css'",
-    "prefix:dev": "node_modules/.bin/postcss --use autoprefixer dest/styles/*.css --replace",
-    "prefix:dist": "node_modules/.bin/postcss --use autoprefixer dist/styles/*.css --replace",
-    "inject:dev": "wiredep -s dest/index.html",
-    "inject:dist": "wiredep -s dist/index.html",
-    "copy:dev": "cp -r src/img dest/img",
-    "copy:dist": "cp -r src/img dist/img",
-    "build:dev:html": "npm run lint:html && node_modules/.bin/pug  --out dest/ --pretty src/",
-    "build:dist:html": "node_modules/.bin/pug  --out dist/ src/",
-    "build:dev:css": "node_modules/.bin/node-sass  src/ -o dest/styles --output-style expanded",
-    "build:dist:css": "node_modules/.bin/node-sass  src/ -o dist/styles --output-style compressed",
+    "prefix:dev": "node_modules/.bin/postcss --use autoprefixer dest/ptyts/styles/*.css --replace",
+    "prefix:dist": "node_modules/.bin/postcss --use autoprefixer dist/ptyts/styles/*.css --replace",
+    "inject:dev": "wiredep -s dest/ptyts/index.html",
+    "inject:dist": "wiredep -s dist/ptyts/index.html",
+    "copy:dev": "cp -r src/img dest/ptyts/img",
+    "copy:dist": "cp -r src/img dist/ptyts/img",
+    "build:dev:html": "npm run lint:html && node_modules/.bin/pug  --out dest/ptyts/ --pretty src/",
+    "build:dist:html": "node_modules/.bin/pug  --out dist/ptyts/ src/",
+    "build:dev:css": "node_modules/.bin/node-sass  src/ -o dest/ptyts/styles --output-style expanded",
+    "build:dist:css": "node_modules/.bin/node-sass  src/ -o dist/ptyts/styles --output-style compressed",
     "build:dev": "npm run build:dev:html && npm run build:dev:css && npm run inject:dev && npm run prefix:dev && npm run copy:dev",
     "build:dist": "npm run build:dist:html && npm run build:dist:css && npm run inject:dist && npm run prefix:dist && npm run copy:dist",
     "build": "npm run build:dev && npm run build:dist && npm run open",
-    "open": "opn dest/index.html",
+    "open": "opn dest/ptyts/index.html",
     "open:serve": "opn http://127.0.0.1:8080/",
-    "serve": "npm run open:serve && hs dest/"
+    "serve": "npm run open:serve && hs dest/",
+    "deploy": "npm run build:dev && npm run build:dist && gh-pages --dist dist && opn https://bohdanbirdie.github.io/npm/ptyts/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bower": "^1.8.0",
+    "gh-pages": "^0.12.0",
+    "git-scripts": "^0.2.1",
     "htmlhint": "^0.9.13",
     "http-server": "^0.9.0",
     "opn": "^4.0.2",
@@ -40,5 +43,10 @@
     "stylelint": "^7.6.0",
     "wiredep": "^4.0.0",
     "wiredep-cli": "^0.1.0"
+  },
+  "git": {
+    "scripts": {
+      "pre-commit": "npm run lint:html && npm run lint:css"
+    }
   }
 }
