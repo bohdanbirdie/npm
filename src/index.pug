@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+  head
+    title title
+    link(rel="stylesheet" href="styles/style.css")
+    // bower:css
+    // endbower
+  body
+    div.wrapper
+      div.logo 
+        a(href="#")
+            img(src="img/logo.png" alt="placeholder")
+        a(href="#about")
+            img(src="img/about.png" alt="placeholder")
+        a(href="#jobs")
+            img(src="img/jobs.png" alt="placeholder")
+      div.search
+        div.search-input
+            p Enter your search terms here...
+            input(type="text")
+            select
+              option(value="all") All languages
+              option(value="en") English
+              option(value="sp") Spanish
+        div.search-control
+            input(type="submit" value="Google Search")
+            input(type="submit" value="I'm feeling lucky")
+            div.l-options
+                a(href="#l-op") Language options
+            p 
+                | ...or 
+                a(href="#") browse web pages
+                |  by category
+      div.about
+        p "Best search engine" 
+            a(href="#") 
+                span.lower Yahoo! Internet Life
+        a(href="#") Google Goes Mobile With Industry's First Comprehensive Wireless Search Engine
+      div.subscribe
+        p © 2000 Google Inc. 
+            a(href="#") About
+            |  | 
+            a(href="#") Search Tips
+            |  | 
+            a(href="#") Google Buttons
+            |  | 
+            a(href="#") Add Google to Your Site
+            |  | 
+            a(href="#") Jobs@Google
+            

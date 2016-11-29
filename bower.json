@@ -1,0 +1,20 @@
+{
+  "name": "pre",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "bohdanbirdie <voja4ok@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}
