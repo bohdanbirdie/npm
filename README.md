@@ -1,7 +1,10 @@
 # Pre/Post -processors homework
 ___
 ##Zotov
-
+####Setup
+- `npm install` to install all packages and modules, build and run the app
+- `npm run build` to build project in developer version
+- `npm run server:start` to run http-server and open page in browser
 ___
 ##Ptyts
 ####First setup
