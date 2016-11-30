@@ -1,0 +1,86 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: Courier;
+  font-size: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%; }
+
+.wrapper, .about {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+
+.about {
+  padding: 1rem 0; }
+
+.search-form,
+.subscribe-form {
+  background: #EEEEEE;
+  height: auto;
+  width: 100%; }
+
+.search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+select,
+.bottom > input {
+  margin-right: 1rem; }
+
+.button {
+  background: #cfcfcf;
+  padding: 3px 5px; }
+
+.subscribe > input {
+  margin-right: 10px; }
+
+div.subscribe-form div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.logo {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 6em;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-shadow: 5px 5px 10px #BABABA; }
+  .logo .g {
+    color: blue; }
+  .logo .o1 {
+    color: red; }
+  .logo .o2 {
+    color: yellow; }
+  .logo .l {
+    color: green; }
