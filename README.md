@@ -17,3 +17,7 @@ ___
 
 ___
 ##Rudavskyi 
+####Setup
+- `npm install` to install all packages and modules, build and run the app
+- `npm run build` to build project in developer version
+- `npm run serve` to run http-server and open page in browser
