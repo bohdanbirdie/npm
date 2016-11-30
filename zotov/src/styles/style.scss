@@ -1,0 +1,80 @@
+$form-color: #EEEEEE;
+$button-color: #D2D1D1;
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Courier;
+    font-size: 16px;
+    justify-content: center;
+    width: 50%;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about {
+    @extend .wrapper;
+    padding: 1rem 0;
+}
+
+.search-form,
+.subscribe-form {
+    background: $form-color;
+    height: auto;
+    width: 100%;
+}
+
+.search {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+select,
+.bottom>input {
+    margin-right: 1rem;
+}
+
+.button {
+    background: darken($form-color, 12%);
+    padding: 3px 5px;
+}
+
+.subscribe>input {
+    margin-right: 10px;
+}
+
+div.subscribe-form {
+    div {
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+        justify-content: center;
+    }
+}
+
+.logo {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-shadow: 5px 5px 10px #BABABA;
+    .g {
+        color: blue;
+    }
+    .o1 {
+        color: red;
+    }
+    .o2 {
+        color: yellow;
+    }
+    .l {
+        color: green;
+    }
+}

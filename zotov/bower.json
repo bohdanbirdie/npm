@@ -1,0 +1,6 @@
+{
+  "name": "New-attemp",
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}

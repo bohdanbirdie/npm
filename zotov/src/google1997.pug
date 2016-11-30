@@ -1,0 +1,57 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset="UTF-8")
+        title Google-1997
+        link(href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        // bower:css
+        // endbower
+    body
+        div.wrapper.logo
+            span.g G
+            span.o1 o
+            span.o2 o
+            span.g g
+            span.l l
+            span.o1 e
+            span.g !
+        div.search-form.wrapper
+            form.search
+                label Search the web using Google!
+                input(type="text" size="25")
+
+                div.wrapper.bottom
+                    select.select
+                        option 10 results
+                        option 20 results
+                        option 50 results
+                        option 100 results
+
+                    input.button(type="submit" value="Google Search")
+                    input.button(type="button" value="I'm feeling lucky")
+                p
+                    i Index containts 25 million pages (soon to be much bigger)asd
+
+        div.wrapper.about
+            a(href="#")
+                h1 About Google!
+
+        div.wrapper
+            span
+                a(href="#") Standford Search
+            span
+                a(href="#") Linux Search
+
+        div.wrapper.subscribe-form
+            form.subscribe
+                h2 Get Google! udates monthly!
+
+                input(type="text" value="your email" size="20")
+                input.button(type="submit" value="Subscribe")
+                a(href="#") Archive
+
+                div
+                    span Copyright &copy;1997-8 Standford University
+        // bower:js
+        // endbower

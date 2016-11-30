@@ -1,0 +1,27 @@
+{
+  "name": "New-attemp",
+  "scripts": {
+  	"install": "bower install & npm run build",
+    "build:html": "pug -o dest/ --pretty src/",
+    "css:autoprefixer": "postcss --use autoprefixer dest/css/*.css --replace",
+    "build:css": "node-sass -o dest/css/ src/styles/",
+    "lint": "htmlhint dest/ *.html && csslint dest/css && npm run css:autoprefixer",
+    "server:start": "hs dest/ -o http://127.0.0.1:8080/google1997.html",
+    "wiredep": "wiredep -s dest/*.html",
+    "build": "npm run build:html && npm run build:css && npm run lint && npm run wiredep && npm run server:start",
+    "watch": "npm run build && onchange 'src/*.*' 'src/**/*.*' -- npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "bower": "^1.8.0",
+    "csslint": "^1.0.4",
+    "htmlhint": "^0.9.13",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.13.0",
+    "onchange": "^3.0.2",
+    "postcss-cli": "^2.6.0",
+    "pug": "^2.0.0-beta6",
+    "wiredep": "^4.0.0",
+    "wiredep-cli": "^0.1.0"
+  }
+}
