@@ -1,8 +1,7 @@
 {
   "name": "New-attemp",
   "scripts": {
-		"install": "npm run build",
-    "postinstall": "bower install",
+	"install": "bower install & npm run build",
     "build:html": "pug -o dest/ --pretty src/",
     "css:autoprefixer": "postcss --use autoprefixer dest/css/*.css --replace",
     "build:css": "node-sass -o dest/css/ src/styles/",
