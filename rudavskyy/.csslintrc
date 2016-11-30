@@ -1,0 +1,1 @@
+css lint --ignore=order-alphabetical,universal-selector,vendor-prefix,compatible-vendor-prefixes
