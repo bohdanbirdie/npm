@@ -10,7 +10,7 @@
     "build:html": "pug -o dest/ --pretty src/index.pug",
     "build:css": "node-sass -o dest/ src/style.scss",
     "autopref": "postcss --use autoprefixer dest/*.css --replace",
-    "build": "npm run lint:html && npm run lint:css && npm run build:html && npm run build:css && npm run autopref",
+    "build": "npm run lint:html && npm run build:html && npm run build:css && npm run lint:css && npm run autopref",
     "serve": "hs dest/ -o http://127.0.0.1:8080/index.html",
     "deploy": "npm run build && gh-pages --dist dist && -o https://petrorudavskyy.github.io/npm/rudavskyy"
   },
